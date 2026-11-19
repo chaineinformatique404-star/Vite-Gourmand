@@ -1,0 +1,296 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #faf8f2;
+    color: #242424;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #42651e;
+}
+
+.header {
+    min-height: 90px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #e3dfd2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #42651e;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 36px;
+}
+
+.logo small {
+    display: block;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 3px;
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header nav a {
+    color: #242424;
+    text-decoration: none;
+}
+
+.header-button {
+    padding: 13px 25px;
+    border: 1px solid #42651e;
+    border-radius: 9px;
+    text-decoration: none;
+}
+
+.connexion-container {
+    max-width: 1250px;
+    margin: 70px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    position: relative;
+    isolation: isolate;
+}
+
+
+.connexion-container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 200px);
+    background: url("images/feuilles.png") center/100% 100% no-repeat;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.connexion-form h1 {
+    margin: 0 0 18px;
+    font-family: Georgia, serif;
+    font-size: 48px;
+}
+
+.intro {
+    max-width: 470px;
+    margin-bottom: 40px;
+    color: #666;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.champ {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 12px;
+    border: 1px solid #d5d0c5;
+    border-radius: 9px;
+    background: #fffefa;
+}
+
+.champ-icon {
+    color:  #666;
+    font-size: 22px;
+}
+
+.champ input {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 16px;
+}
+
+.champ:focus-within {
+    border-color: #42651e;
+    box-shadow: 0 0 0 2px #42651e20;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0 30px;
+    font-size: 14px;
+}
+
+.souvenir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.souvenir input {
+    accent-color:  #666;
+}
+
+.options a,
+.inscription a {
+    font-weight: bold;
+    color:#c88a2d
+}
+
+.bouton-connexion {
+    width: 100%;
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    border: 0;
+    border-radius: 9px;
+    background: #42651e;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bouton-connexion:hover {
+    background: #324d17;
+}
+
+.separateur {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 30px 0;
+    color: #666;
+}
+
+.separateur::before,
+.separateur::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #d5d0c5;
+}
+
+.inscription {
+    text-align: center;
+    color: #555;
+}
+
+.inscription a {
+    margin-left: 8px;
+}
+
+.connexion-image {
+    min-height: 530px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 35px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(transparent 45%, #17210ccc);
+}
+
+.connexion-fond {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-texte {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-style: italic;
+}
+
+.image-texte p {
+    margin: 5px 0;
+}
+
+.erreur {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #fce8e6;
+    color: #a12622;
+}
+
+@media (max-width: 800px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .connexion-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 40px auto;
+    }
+
+    .connexion-form h1 {
+        font-size: 38px;
+    }
+
+    .connexion-image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header nav {
+        flex-wrap: wrap;
+    }
+
+    .connexion-container {
+        padding: 0 18px;
+    }
+
+    .options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}

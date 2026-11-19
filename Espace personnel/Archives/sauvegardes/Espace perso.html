@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de la commande - Vite & Gourmand</title>
+    <link rel="stylesheet" href="Espace perso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-vite">Vite &</span>
+            <span class="logo-gourmand">Gourmand</span>
+            <small>TRAITEUR ÉVÉNEMENTIEL</small>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Accueil</a>
+            <a href="liste-menus.html">Menus</a>
+            <a href="#">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="mon-compte.html" class="account-button">
+                <i class="fa-regular fa-user"></i>
+                Mon compte
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <a href="#" class="cart-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Panier (0)
+            </a>
+        </div>
+    </header>
+
+    <!-- FIL D'ARIANE -->
+    <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="mon-compte.html">Mon compte</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="mes-commandes.html">Mes commandes</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Détail de la commande</span>
+    </div>
+
+    <main class="account-container">
+
+        <!-- MENU ESPACE UTILISATEUR -->
+        <aside class="account-sidebar">
+            <h2>MON ESPACE</h2>
+            <nav class="account-navigation">
+                <a href="mon-compte.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Tableau de bord</span>
+                </a>
+                <a href="mes-commandes.html" class="active">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Mes commandes</span>
+                </a>
+                <a href="mes-avis.html">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Mes avis</span>
+                </a>
+                <a href="mon-profil.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Mon profil</span>
+                </a>
+                <a href="securite.html">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Sécurité</span>
+                </a>
+            </nav>
+            <div class="logout">
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- DETAIL DE LA COMMANDE -->
+        <section class="dashboard order-detail">
+
+            <div class="detail-heading">
+                <div>
+                    <a href="mes-commandes.html" class="back-link">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Retour à mes commandes
+                    </a>
+                    <h1>Détail de la commande <span id="orderNumber">#000124</span></h1>
+                    <p class="detail-date" id="orderDateLabel">Commandée le 12 août 2026 à 18:45</p>
+                </div>
+                <span class="status waiting" id="orderStatus" data-status="pending">
+                  En attente d'acceptation
+                </span>
+            </div>
+
+            <!-- MESSAGE SUR LES ACTIONS DISPONIBLES -->
+            <div class="order-notice">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Vous pouvez modifier ou annuler cette commande tant qu'un employé ne l'a pas acceptée.</p>
+            </div>
+
+            <!-- RESUME -->
+            <section class="detail-card">
+                <div class="detail-card-heading">
+                    <h2><i class="fa-solid fa-receipt"></i> Résumé de la commande</h2>
+                </div>
+
+                <div class="summary-layout">
+                    <div class="summary-image">
+                        <img src="images/photo menu 2.png" alt="Photo du menu commandé" id="summaryImage">
+                    </div>
+                    <div class="summary-main">
+                        <span class="eyebrow">MENU COMMANDÉ</span>
+                        <h3 id="summaryTitle">Menu Gourmand</h3>
+                        <p id="summaryDescription">Un menu généreux pour profiter d'un repas convivial.</p>
+                        <div class="summary-tags">
+                            <span><i class="fa-solid fa-user-group"></i> <span id="summaryQuantity">1 personne</span></span>
+                            <span><i class="fa-solid fa-truck"></i> <span id="summaryDelivery">Livraison à domicile</span></span>
+                        </div>
+                    </div>
+                    <div class="summary-price">
+                        <span>Total de la commande</span>
+                        <strong id="summaryTotal">25,00 €</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMATIONS DE LA COMMANDE -->
+            <div class="detail-columns">
+
+                <section class="detail-card">
+                    <div class="detail-card-heading">
+                        <h2><i class="fa-solid fa-calendar-days"></i> Date et livraison</h2>
+                    </div>
+                    <div class="detail-information">
+                        <div class="information-row">
+                            <span>Date souhaitée</span>
+                           <strong data-editable="date">15 août 2026</strong>
+                        </div>
+                        <div class="information-row">
+                            <span>Créneau de livraison</span>
+                            <strong data-editable="creneau">Entre 12 h et 13 h</strong>
+                        </div>
+                        <div class="information-row">
+                            <span>Mode de réception</span>
+                            <strong data-editable="mode">Livraison à domicile</strong>
+                        </div>
+                        <div class="information-row">
+                            <span>Adresse</span>
+                            <strong data-editable="adresse">12 rue des Érables, 69000 Lyon</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="detail-card">
+                    <div class="detail-card-heading">
+                        <h2><i class="fa-solid fa-user"></i> Contact</h2>
+                    </div>
+                    <div class="detail-information">
+                        <div class="information-row">
+                            <span>Nom</span>
+                             <strong data-editable="nom">Kévin Dupont</strong>
+                        </div>
+                        <div class="information-row">
+                            <span>E-mail</span>
+                            <strong data-editable="email">kevin.dupont@email.com</strong>
+                        </div>
+                        <div class="information-row">
+                            <span>Téléphone</span>
+                            <strong data-editable="telephone">06 12 34 56 79</strong>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- INSTRUCTIONS -->
+            <section class="detail-card">
+                <div class="detail-card-heading">
+                    <h2><i class="fa-regular fa-comment-dots"></i> Instructions complémentaires</h2>
+                    <button type="button" id="editInstructionsBtn" class="detail-edit-btn">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <p id="customerInstructions" class="customer-note">Merci de sonner à l'interphone à votre arrivée.</p>
+                <div class="instruction-actions"></div>
+            </section>
+
+            <!-- SUIVI -->
+            <section class="detail-card tracking-card">
+                <div class="detail-card-heading">
+                    <h2><i class="fa-solid fa-route"></i> Suivi de la commande</h2>
+                    <span class="tracking-locked"><i class="fa-solid fa-lock"></i> Disponible après acceptation</span>
+                </div>
+                <p class="tracking-intro">L'historique détaillé des statuts sera disponible dès que votre commande aura été acceptée par un employé.</p>
+                <ol class="tracking-timeline">
+                    <li class="timeline-step completed">
+                        <span class="timeline-icon"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <strong>Commande reçue</strong>
+                            <p>12 août 2026 à 18:45</p>
+                        </div>
+                    </li>
+                    <li class="timeline-step pending">
+                        <span class="timeline-icon"><i class="fa-regular fa-clock"></i></span>
+                        <div>
+                            <strong>En attente d'acceptation</strong>
+                            <p>En attente de validation par l'équipe</p>
+                        </div>
+                    </li>
+                    <li class="timeline-step upcoming">
+                        <span class="timeline-icon"><i class="fa-solid fa-utensils"></i></span>
+                        <div>
+                            <strong>Préparation</strong>
+                            <p>À venir</p>
+                        </div>
+                    </li>
+                    <li class="timeline-step upcoming">
+                        <span class="timeline-icon"><i class="fa-solid fa-flag-checkered"></i></span>
+                        <div>
+                            <strong>Commande terminée</strong>
+                            <p>À venir</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- TOTAL -->
+            <section class="detail-card total-card">
+                <div class="detail-card-heading">
+                    <h2><i class="fa-solid fa-calculator"></i> Récapitulatif du prix</h2>
+                </div>
+                <div class="total-line">
+                    <span id="totalMenuLabel">Menu Gourmand × 1 personne</span>
+                    <strong id="totalMenuPrice">25,00 €</strong>
+                </div>
+                <div class="total-line">
+                    <span>Livraison</span>
+                    <strong>Offerte</strong>
+                </div>
+                <div class="total-line total-final">
+                    <span>Total à payer</span>
+                    <strong id="totalFinalPrice">25,00 €</strong>
+                </div>
+            </section>
+
+            <section class="detail-card" id="finishedReviewSection" hidden>
+                <div class="detail-card-heading">
+                    <h2><i class="fa-regular fa-star"></i> Donner votre avis</h2>
+                </div>
+                <p class="tracking-intro">Votre commande est terminée. Partagez votre expérience sur ce menu.</p>
+
+                <fieldset class="rating-field">
+                    <legend>Votre note</legend>
+                    <div class="rating-stars" id="finishedRatingStars">
+                        <button type="button" data-rating="1" aria-label="1 étoile"><i class="fa-regular fa-star"></i></button>
+                        <button type="button" data-rating="2" aria-label="2 étoiles"><i class="fa-regular fa-star"></i></button>
+                        <button type="button" data-rating="3" aria-label="3 étoiles"><i class="fa-regular fa-star"></i></button>
+                        <button type="button" data-rating="4" aria-label="4 étoiles"><i class="fa-regular fa-star"></i></button>
+                        <button type="button" data-rating="5" aria-label="5 étoiles"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <p id="ratingLabel">Aucune note sélectionnée</p>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="finishedReviewComment">Votre commentaire</label>
+                    <textarea id="finishedReviewComment" rows="4" placeholder="Ex: excellent repas, très bon service..."></textarea>
+                </div>
+
+                <div class="review-form-actions">
+                    <button type="button" class="submit-review" id="submitFinishedReview">Publier mon avis</button>
+                </div>
+
+                <p id="reviewMessage"></p>
+            </section>
+
+            <!-- ACTIONS -->
+            <div class="order-actions">
+                <button type="button" id="editOrderBtn" class="button-primary">
+                    <i class="fa-solid fa-pen"></i>
+                    Modifier la commande
+                </button>
+                <button type="button" class="button-danger">
+                    <i class="fa-regular fa-trash-can"></i>
+                    Annuler la commande
+                </button>
+            </div>
+
+            <p class="detail-footnote">
+                Les informations présentées sont des exemples statiques. Les actions de modification et d'annulation seront reliées au fonctionnement du site ultérieurement.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <span>Vite &</span>
+                    <strong>Gourmand</strong>
+                </a>
+                <small>TRAITEUR ÉVÉNEMENTIEL</small>
+                <p>Des repas frais, savoureux et équilibrés, livrés directement chez vous.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <a href="index.html">Accueil</a>
+                <a href="liste-menus.html">Menus</a>
+                <a href="#">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Aide</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Livraison</a>
+                <a href="#">Paiement</a>
+                <a href="contact.html">Nous contacter</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Informations légales</h3>
+                <a href="#">CGV</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Droit de rétractation</a>
+            </div>
+
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Recevez nos nouveautés et offres exclusives.</p>
+                <form>
+                    <input type="email" placeholder="Votre e-mail" aria-label="Votre e-mail">
+                    <button type="submit" aria-label="S'inscrire à la newsletter">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">© 2026 Vite & Gourmand. Tous droits réservés.</div>
+    </footer>
+
+</body>
+
+<script src="Espace perso.js"></script>
+
+</html>

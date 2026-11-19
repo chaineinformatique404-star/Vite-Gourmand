@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Vite & Gourmand pour vos demandes de devis et vos événements.">
+    <title>Contact | V&G</title>
+    <link rel="stylesheet" href="../.Composants/style commun.css">
+    <link rel="stylesheet" href="contact-style.css">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+
+<?php $page = 'contact'; require_once __DIR__ . '/../.Composants/header.php'; ?>
+
+    <main>
+        <section class="contact-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Contact</h1>
+                <p>Une question, un devis ou un événement en préparation ?<br>
+                    Notre équipe est à votre écoute pour vous accompagner.</p>
+            </div>
+        </section>
+
+        <section class="contact-layout container" aria-label="Informations de contact">
+            <div class="contact-left">
+            <section class="panel contact-form-panel">
+                <div class="section-heading">
+                    <span class="heading-icon" aria-hidden="true">✉</span>
+                    <div>
+                        <h2>Envoyez-nous un message</h2>
+                        <p>Remplissez le formulaire ci-dessous, nous vous répondrons dans les plus brefs délais.</p>
+                    </div>
+                </div>
+
+                <form id="contact-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="nom">Nom <span>*</span></label>
+                            <input id="nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
+                            <small class="field-error" id="nom-error"></small>
+                        </div>
+                        <div class="form-field">
+                            <label for="prenom">Prénom <span>*</span></label>
+                            <input id="prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+                            <small class="field-error" id="prenom-error"></small>
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="email">Adresse e-mail <span>*</span></label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="exemple@mail.com" required>
+                            <small class="field-error" id="email-error"></small>
+                        </div>
+                        <div class="form-field">
+                            <label for="telephone">Numéro de Téléphone</label>
+                            <input id="telephone" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78">
+                            <small class="field-error" id="telephone-error"></small>
+                        </div>
+                        <div class="form-field">
+                            <label for="objet">Objet <span>*</span></label>
+                            <select id="objet" name="objet" required>
+                                <option value="">Choisissez un objet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="menu">Question sur un menu</option>
+                                <option value="commande">Question sur une commande</option>
+                                <option value="evenement">Organisation d'un événement</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                            <small class="field-error" id="objet-error"></small>
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="message">Votre message <span>*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+                            <small class="field-error" id="message-error"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-bottom">
+                        <p class="required-note"><span>*</span> Champs obligatoires</p>
+                        <button class="button button-primary send-button" type="submit"><span aria-hidden="true">➤</span> Envoyer le message</button>
+                    </div>
+                    <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section class="panel locaux-panel">
+                <div class="mini-heading"><span aria-hidden="true">⌂</span><h2>Nos locaux</h2></div>
+                <div class="locaux-image-slot">
+                    <img src="Images/locaux.jpg" alt="Nos locaux">
+                </div>
+            </section>
+            </div>
+
+            <div class="contact-side">
+                <section class="panel details-panel">
+                    <div class="mini-heading"><span aria-hidden="true">⌖</span><h2>Nos coordonnées</h2></div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">⌖</span>
+                        <div><h3>Adresse</h3><p>123 Rue des Saveurs<br>Paris et 75000</p></div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">☎</span>
+                        <div><h3>Téléphone</h3><p><a href="tel:+33000000000">Numéro à compléter</a><br><span class="muted">Du lundi au vendredi, 9h – 18h</span></p></div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">✉</span>
+                        <div><h3>E-mail</h3><p><a href="mailto:contact@viteetgourmand.fr">contact@viteetgourmand.fr</a><br><span class="muted">Réponse sous 24 à 48h</span></p></div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">◷</span>
+                        <div><h3>Horaires</h3><p>Lundi – Vendredi : 9h – 18h<br>Samedi : sur rendez-vous<br>Dimanche : fermé</p></div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">✆</span>
+                        <div><h3>Commande et devis</h3><p>Un contact dédié pour suivre une commande en cours ou modifier un devis.<br><span class="muted">06 54 86 31 77</span></p></div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon" aria-hidden="true">♧</span>
+                        <div>
+                            <h3>Suivez-nous</h3>
+                            <div class="social-links" aria-label="Réseaux sociaux">
+                                <a href="#"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook</a>
+                                <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+                                <a href="#"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel location-panel">
+                    <div class="mini-heading"><span aria-hidden="true">⌖</span><h2>Notre localisation</h2></div>
+                    <div class="map-placeholder">
+                        <div class="map-image">
+                        <img src="images/carte.jpg" alt="Carte de localisation de Vite &amp; Gourmand">
+                    </div>
+                    </div>
+                    <button class="map-button" type="button">Voir sur la carte</button>
+                </section>
+            </div>
+        </section>
+
+        <section class="faq-section container" aria-labelledby="faq-title">
+            <div class="faq-image">
+                <div class="support-card">
+                    <img src="images/service client.jpg" alt="Chat">
+                    <div class="support-body">
+                        <span class="support-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+                        <h3>Discutez avec nos conseillers</h3>
+                        <p>Un besoin d'aide pour votre événement ? Notre équipe est disponible pour vous répondre et vous accompagner.</p>
+                        <a class="support-button" href="#contact-form">Nous écrire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-content">
+                <h2 id="faq-title">Questions fréquentes</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Comment obtenir un devis ?</summary>
+                        <p>Envoyez-nous votre demande en précisant le type d'événement, la date, le nombre de convives et vos besoins. Nous pourrons ensuite vous répondre plus précisément.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quels types d'événements couvrez-vous ?</summary>
+                        <p>Cette rubrique pourra présenter les prestations proposées par Vite &amp; Gourmand : mariages, anniversaires, séminaires ou événements privés et professionnels.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quels sont les délais pour une commande ?</summary>
+                        <p>Les délais dépendent du menu, du nombre de convives et de la date souhaitée. Contactez-nous suffisamment tôt pour vérifier les disponibilités.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Proposez-vous des menus spécifiques ?</summary>
+                        <p>Indiquez vos besoins alimentaires dans votre message : nous vous préciserons les possibilités selon les menus disponibles.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Peut-on modifier une commande après l'avoir validée ?</summary>
+                        <p>Oui, dans la limite des délais indiqués. Contactez-nous au plus vite avec votre numéro de commande pour étudier la modification.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Livrez-vous à domicile ou en entreprise ?</summary>
+                        <p>Nous livrons à domicile, en entreprise ou sur le lieu de votre événement. Les frais de livraison sont précisés lors du devis.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Peut-on déguster avant de commander ?</summary>
+                        <p>Pour les grands événements, nous pouvons organiser une dégustation sur rendez-vous. Contactez-nous pour en discuter.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quels moyens de paiement acceptez-vous ?</summary>
+                        <p>Nous acceptons les cartes bancaires, les virements et les espèces. Les modalités de règlement sont précisées dans votre devis.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Comment annuler une commande ?</summary>
+                        <p>Toute annulation doit nous être signalée par écrit au plus tôt. Les conditions d'annulation sont précisées dans votre devis.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-strip" aria-label="Nos engagements">
+            <div class="feature"><i class="fa-solid fa-clock" aria-hidden="true"></i><div><h3>Disponible 24h/24, 7j/7</h3><p>Écrivez-nous à tout moment</p></div></div>
+            <div class="feature"><i class="fa-solid fa-comments" aria-hidden="true"></i><div><h3>Nos conseillers sont là pour vous</h3><p>Une équipe à votre écoute</p></div></div>
+            <div class="feature"><i class="fa-solid fa-bolt" aria-hidden="true"></i><div><h3>Réponse rapide</h3><p>Sous 24 à 48h ouvrées</p></div></div>
+            <div class="feature"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><div><h3>Devis personnalisé</h3><p>Adapté à vos besoins</p></div></div>
+        </section>
+    </main>
+
+<?php require_once __DIR__ . '/../.Composants/footer.html'; ?>
+
+</body>
+</html>

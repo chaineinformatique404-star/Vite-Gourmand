@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mes commandes - Vite & Gourmand</title>
+
+    <link rel="stylesheet" href="Espace perso.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-vite">Vite &</span>
+            <span class="logo-gourmand">Gourmand</span>
+
+            <small>TRAITEUR ÉVÉNEMENTIEL</small>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">Accueil</a>
+            <a href="liste-menus.html">Menus</a>
+            <a href="#">À propos</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="mon-compte.html" class="account-button">
+
+                <i class="fa-regular fa-user"></i>
+
+                Mon compte
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+
+            <a href="#" class="cart-button">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Panier (0)
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="mon-compte.html">Mon compte</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="mes-commandes.html">Mes commandes</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Mes commandes</span>
+    </div>
+
+    <main class="account-container">
+        <aside class="account-sidebar">
+            <h2>MON ESPACE</h2>
+            <nav class="account-navigation">
+                <a href="mon-compte.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Tableau de bord</span>
+                </a>
+                <a href="mes-commandes.html" class="active">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Mes commandes</span>
+                </a>
+                <a href="mes-avis.html">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Mes avis</span>
+                </a>
+                <a href="mon-profil.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Mon profil</span>
+                </a>
+                <a href="securite.html">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Sécurité</span>
+                </a>
+            </nav>
+            <div class="logout">
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </div>
+        </aside>
+
+        
+
+
+
+            <!-- LISTE DES COMMANDES -->
+
+            <section class="orders-list">
+
+
+                <!-- COMMANDE 1 -->
+
+                <article class="order-card" data-status="preparing">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <h3>#000124</h3>
+
+                            <p>12/08/2026 à 18:45</p>
+
+                        </div>
+
+                        <span class="status preparing">En attente</span>
+
+                    </div>
+
+
+                    <div class="order-card-body">
+
+                        <div class="order-card-image">
+
+                            <img src="images/photo menu 2.png" alt="Menu Gourmand">
+
+                        </div>
+
+
+                        <div class="order-card-info">
+
+                            <h4>Menu Gourmand</h4>
+
+                            <p><strong>Prix :</strong> 25 €</p>
+
+                            <p><strong>Quantité :</strong> 1 personne</p>
+
+                            <p><strong>Livraison :</strong> À domicile</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="order-card-footer">
+                    <a href="detail-commande.html?id=000124&status=preparing" class="order-link">
+                    Détails <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                     
+                    </div>
+                    
+
+                </article>
+
+
+
+                <!-- COMMANDE 2 -->
+
+                <article class="order-card" data-status="finished">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <h3>#000123</h3>
+
+                            <p>10/08/2026 à 12:30</p>
+
+                        </div>
+
+                        <span class="status finished">Terminée</span>
+
+                    </div>
+
+
+                    <div class="order-card-body">
+
+                        <div class="order-card-image">
+
+                            <img src="images/quiche.jpg" alt="Menu Équilibre">
+
+                        </div>
+
+
+                        <div class="order-card-info">
+
+                            <h4>Menu Équilibre</h4>
+
+                            <p><strong>Prix :</strong> 44 €</p>
+
+                            <p><strong>Quantité :</strong> 2 personnes</p>
+
+                            <p><strong>Livraison :</strong> À domicile</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-card-footer">
+
+                       
+
+                        <a href="detail-commande.html?id=000123&status=finished" class="order-link">Détails <i class="fa-solid fa-arrow-right"></i></a>
+            
+                    </div>
+
+                       
+
+
+                </article>
+
+
+
+                <!-- COMMANDE 3 -->
+
+                <article class="order-card" data-status="finished">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <h3>#000122</h3>
+
+                            <p>07/08/2026 à 19:10</p>
+
+                        </div>
+
+                        <span class="status finished">Terminée</span>
+
+                    </div>
+
+
+                    <div class="order-card-body">
+
+                        <div class="order-card-image">
+
+                            <img src="images/pates.jpg" alt="Menu Plaisir">
+
+                        </div>
+
+
+                        <div class="order-card-info">
+
+                            <h4>Menu Plaisir</h4>
+
+                            <p><strong>Prix :</strong> 40 €</p>
+
+                            <p><strong>Quantité :</strong> 2 personnes</p>
+
+                            <p><strong>Livraison :</strong> À retirer</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-card-footer">
+
+                        <a href="detail-commande.html?id=000122&status=finished" class="order-link">Détails <i class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+
+               
+
+                </article>
+
+
+
+                <!-- COMMANDE 4 -->
+
+                <article class="order-card" data-status="finished">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <h3>#000121</h3>
+
+                            <p>02/08/2026 à 14:20</p>
+
+                        </div>
+
+                        <span class="status finished">Terminée</span>
+
+                    </div>
+
+
+                    <div class="order-card-body">
+
+                        <div class="order-card-image">
+
+                            <img src="images/cocktail.jpg" alt="Menu Gourmand">
+
+                        </div>
+
+
+                        <div class="order-card-info">
+
+                            <h4>Menu Cocktail</h4>
+
+                            <p><strong>Prix :</strong> 180 €</p>
+
+                            <p><strong>Quantité :</strong> 10 personne</p>
+
+                            <p><strong>Livraison :</strong> À domicile</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-card-footer">
+                    <a href="detail-commande.html?id=000121&status=finished" class="order-link">
+                     Détails <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </div>
+
+                
+
+                </article>
+
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <!-- MARQUE -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <span>Vite &</span>
+
+                    <strong>Gourmand</strong>
+
+                </a>
+
+
+                <small>
+                    TRAITEUR ÉVÉNEMENTIEL
+                </small>
+
+
+                <p>
+                    Des repas frais, savoureux et équilibrés,
+                    livrés directement chez vous.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="footer-column">
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Accueil</a>
+                <a href="liste-menus.html">Menus</a>
+                <a href="#">À propos</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+
+            <!-- AIDE -->
+
+            <div class="footer-column">
+
+                <h3>Aide</h3>
+
+                <a href="#">FAQ</a>
+                <a href="#">Livraison</a>
+                <a href="#">Paiement</a>
+                <a href="contact.html">Nous contacter</a>
+
+            </div>
+
+
+
+            <!-- INFORMATIONS -->
+
+            <div class="footer-column">
+
+                <h3>Informations légales</h3>
+
+                <a href="#">CGV</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Droit de rétractation</a>
+
+            </div>
+
+
+
+            <!-- NEWSLETTER -->
+
+            <div class="newsletter">
+
+                <h3>Newsletter</h3>
+
+                <p>
+                    Recevez nos nouveautés<br>
+                    et offres exclusives.
+                </p>
+
+
+                <form>
+
+                    <input
+                        type="email"
+                        placeholder="Votre e-mail"
+                    >
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Vite & Gourmand. Tous droits réservés.
+
+        </div>
+
+    </footer>
+
+    <script src="Espace perso.js"></script>
+
+</body>
+
+</html>

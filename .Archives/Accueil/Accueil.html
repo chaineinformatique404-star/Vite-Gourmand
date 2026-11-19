@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite & Gourmand</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+   <!-- ===========================
+     HEADER
+=========================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-text">
+                <strong>Vite & <span>Gourmand</span></strong>
+                <span>TRAITEUR ÉVÉNEMENTIEL</span>
+            </div>
+
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="pages/menus.html">Menus</a>
+            <a href="pages/a-propos.html">À propos</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="pages/connexion.html" class="btn-login">
+                ♙ Connexion
+            </a>
+
+            <a href="pages/inscription.html" class="btn-signup">
+                S'inscrire
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ===========================
+     HERO
+=========================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-subtitle">
+                25 ANS DE SAVOIR-FAIRE À BORDEAUX
+            </span>
+
+            <h1>
+                Vite & Gourmand
+            </h1>
+
+            <div class="hero-slogan">
+                Des menus créés avec passion<br>
+                pour tous vos événements
+            </div>
+
+            <div class="hero-decoration">
+                <span></span>
+                ♨
+                <span></span>
+            </div>
+
+            <p>
+                Mariage, anniversaire, repas d'entreprise ou fêtes de fin d'année,
+                nous régalons nos invités avec des produits frais et des recettes
+                faites maison.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="pages/menus.html" class="btn-primary">
+                    Découvrir les menus →
+                </a>
+
+                <a href="pages/contact.html" class="btn-secondary">
+                    Nous contacter ✉
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ===========================
+         SEARCH
+    =========================== -->
+
+    <section class="search-section">
+        <div class="search-container">
+
+            <div class="search-title">
+                <strong>TROUVEZ CE QUE VOUS CHERCHEZ</strong>
+                <span>De délicieux repas, selon vos envies</span>
+            </div>
+
+            <div class="search-filters">
+
+                <div class="filter-group">
+                    <label for="event">Type d'événement</label>
+                    <select id="event">
+                        <option value="">Sélectionner</option>
+                        <option value="mariage">Mariage</option>
+                        <option value="entreprise">Entreprise</option>
+                        <option value="anniversaire">Anniversaire</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="people">Nombre de personnes</label>
+                    <select id="people">
+                        <option value="">Sélectionner</option>
+                        <option value="10">1 à 10</option>
+                        <option value="30">11 à 30</option>
+                        <option value="50">31 à 50</option>
+                        <option value="50+">Plus de 50</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="budget">Budget par personne</label>
+                    <select id="budget">
+                        <option value="">Sélectionner</option>
+                        <option value="20">Moins de 20 €</option>
+                        <option value="40">20 à 40 €</option>
+                        <option value="60">40 à 60 €</option>
+                        <option value="60+">Plus de 60 €</option>
+                    </select>
+                </div>
+
+                <button type="button" class="search-button">
+                    Rechercher
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================
+         MENUS POPULAIRES
+    =========================== -->
+
+    <section class="popular-menus">
+
+        <div class="popular-container">
+
+            <div class="section-title">
+                <span>NOS MENUS POPULAIRES</span>
+
+                <h2>Découvrez nos menus phares</h2>
+
+                <p>
+                    Des créations gourmandes pour toutes vos occasions
+                </p>
+            </div>
+
+
+            <div class="menu-grid">
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <span>IMAGE</span>
+                    </div>
+
+                    <div class="menu-content">
+
+                        <h3>Menu Gourmand</h3>
+
+                        <p>
+                            À partir de <strong>25€</strong> / pers.
+                        </p>
+
+                        <a href="pages/menu-detail.html" class="menu-button">
+                            +
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <span>IMAGE</span>
+                    </div>
+
+                    <div class="menu-content">
+
+                        <h3>Menu Équilibre</h3>
+
+                        <p>
+                            À partir de <strong>22€</strong> / pers.
+                        </p>
+
+                        <a href="pages/menu-detail.html" class="menu-button">
+                            +
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <span>IMAGE</span>
+                    </div>
+
+                    <div class="menu-content">
+
+                        <h3>Menu Prestige</h3>
+
+                        <p>
+                            À partir de <strong>35€</strong> / pers.
+                        </p>
+
+                        <a href="pages/menu-detail.html" class="menu-button">
+                            +
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="popular-button">
+                <a href="pages/menus.html" class="btn-primary">
+                    Voir tous les menus →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================
+         NOTRE ENGAGEMENT
+         + ÉQUIPE PASSIONNÉE
+    =========================== -->
+
+    <section class="engagement">
+
+        <div class="engagement-container">
+
+            <div class="engagement-content">
+
+                <span>NOTRE ENGAGEMENT</span>
+
+                <h2>Pourquoi nous choisir ?</h2>
+
+                <ul>
+                    <li>25 ans d'expérience dans la gastronomie événementielle</li>
+                    <li>Des produits frais, locaux et de saison</li>
+                    <li>Des menus personnalisés selon vos envies et besoins</li>
+                    <li>Une équipe passionnée et à votre écoute</li>
+                    <li>Respect des régimes alimentaires et des allergènes</li>
+                    <li>Livraison et installation dans le lieu de votre choix</li>
+                </ul>
+
+            </div>
+
+
+            <div class="team-content">
+
+                <span>UNE ÉQUIPE PASSIONNÉE</span>
+
+                <h2>Derrière Vite & Gourmand</h2>
+
+                <div class="team-grid">
+
+                    <article class="team-card">
+
+                        <div class="team-image">
+                            <span>IMAGE</span>
+                        </div>
+
+                        <div class="team-info">
+                            <h3>Julie</h3>
+                            <strong>Organisation & Relation client</strong>
+
+                            <p>
+                                Julie est votre interlocutrice privilégiée.
+                                Elle veille à la réussite de votre événement
+                                de A à Z.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="team-card">
+
+                        <div class="team-image">
+                            <span>IMAGE</span>
+                        </div>
+
+                        <div class="team-info">
+                            <h3>José</h3>
+                            <strong>Chef cuisinier</strong>
+
+                            <p>
+                                José imagine et cuisine des menus savoureux
+                                avec créativité et exigence depuis plus de 25 ans.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+<!-- ===========================
+         AVANTAGES
+    =========================== -->
+
+    <section class="features">
+        <div class="features-container">
+
+            <div class="feature">
+                <div class="feature-icon">X</div>
+
+                <div>
+                    <h3>Produits frais</h3>
+                    <p>Sélectionnés avec soin</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">X</div>
+
+                <div>
+                    <h3>Faits maison</h3>
+                    <p>Préparés par nos chefs</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">X</div>
+
+                <div>
+                    <h3>Livraison rapide</h3>
+                    <p>À l'heure, à votre porte</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">X</div>
+
+                <div>
+                    <h3>Paiement sécurisé</h3>
+                    <p>100% sécurisé</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- ===========================
+         CONTACT
+    =========================== -->
+
+    <section class="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-message">
+
+                <div class="contact-icon">
+                    X
+                </div>
+
+                <div class="contact-text">
+                    <h3>Une question, un projet ?</h3>
+
+                    <p>
+                        Notre équipe est à votre écoute pour répondre
+                        à toutes vos demandes.
+                    </p>
+
+                    <a href="pages/contact.html" class="btn-secondary">
+                        Nous contacter →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <strong>Téléphone</strong>
+                    <p>01 23 45 67 89</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>E-mail</strong>
+                    <p>contact@vitegourmand.fr</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Adresse</strong>
+                    <p>123 Rue des Saveurs, 75000 Paris</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Horaires</strong>
+                    <p>Lun - Ven : 9h00 - 18h00</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-image">
+                <span>IMAGE</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===========================
+         FOOTER
+    =========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    <div class="logo-image"></div>
+
+                    <div>
+                        <strong>VITE & GOURMAND</strong>
+                        <span>Le goût de l'instant</span>
+                    </div>
+                </div>
+
+                <p>
+                    Des repas savoureux, préparés avec passion
+                    et livrés rapidement chez vous.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#">F</a>
+                    <a href="#">I</a>
+                    <a href="#">L</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>LIENS RAPIDES</h4>
+
+                <a href="index.html">Accueil</a>
+                <a href="pages/menus.html">Menus</a>
+                <a href="pages/a-propos.html">À propos</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="#">FAQ</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>INFORMATIONS</h4>
+
+                <a href="#">Conditions générales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">CGV</a>
+                <a href="#">Plan du site</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>NOS HORAIRES</h4>
+
+                <p>Lundi - Vendredi</p>
+                <p>9h00 - 18h00</p>
+
+                <p>Samedi</p>
+                <p>9h00 - 13h00</p>
+
+                <p>Dimanche</p>
+                <p>Fermé</p>
+
+            </div>
+
+
+            <div class="footer-newsletter">
+
+                <h4>NEWSLETTER</h4>
+
+                <p>
+                    Recevez nos nouveautés
+                    et nos offres spéciales.
+                </p>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Votre email"
+                    >
+
+                    <button type="submit">
+                        →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2026 Vite & Gourmand - Tous droits réservés.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

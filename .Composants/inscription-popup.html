@@ -1,0 +1,118 @@
+<!-- ===========================
+     POPUP INSCRIPTION (composant partagé)
+=========================== -->
+
+<style>
+    #insc-popup { position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center; padding:40px 16px; overflow-y:auto; background:rgba(8,59,48,.6); font-family:Arial, sans-serif; color:#202725; }
+    #insc-popup.open { display:flex; }
+    #insc-popup * { box-sizing:border-box; margin:0; padding:0; }
+    #insc-popup .insc-card { position:relative; width:100%; max-width:520px; padding:40px 40px 34px; border:1px solid #e6e1d8; border-radius:10px; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+    #insc-popup .insc-close { position:absolute; top:12px; right:14px; border:0; background:none; color:#666; font-size:26px; line-height:1; cursor:pointer; }
+    #insc-popup .insc-close:hover { color:#202725; }
+    #insc-popup .insc-brand { margin-bottom:24px; text-align:center; font-family:Georgia, serif; font-size:28px; font-weight:700; color:#083b30; }
+    #insc-popup .insc-brand span { color:#c88a2d; }
+    #insc-popup h2 { margin-bottom:8px; color:#0d4f40; font-family:Georgia, serif; font-size:26px; font-weight:700; text-align:center; }
+    #insc-popup .insc-subtitle { margin-bottom:28px; color:#666; font-size:14px; text-align:center; line-height:1.5; }
+    #insc-popup .insc-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    #insc-popup .insc-field { display:flex; flex-direction:column; min-width:0; }
+    #insc-popup .insc-field.full { grid-column:1 / -1; }
+    #insc-popup label { margin-bottom:6px; font-size:13px; font-weight:600; }
+    #insc-popup label span { color:#c33c26; }
+    #insc-popup input[type="text"], #insc-popup input[type="email"], #insc-popup input[type="tel"], #insc-popup input[type="password"] { width:100%; min-height:44px; padding:10px 14px; border:1px solid #d9d4cb; border-radius:6px; outline:none; font-size:14px; font-family:inherit; color:#202725; background:#fff; }
+    #insc-popup input:focus { border-color:#c88a2d; box-shadow:0 0 0 3px rgba(200,138,45,.15); }
+    #insc-popup .insc-hint { margin-top:4px; color:#666; font-size:12px; }
+    #insc-popup .insc-checkbox { display:flex; align-items:flex-start; gap:10px; margin-top:20px; font-size:13px; color:#666; line-height:1.5; }
+    #insc-popup .insc-checkbox input { margin-top:3px; accent-color:#c88a2d; }
+    #insc-popup .insc-submit { width:100%; min-height:48px; margin-top:24px; border:0; border-radius:6px; color:#fff; background:#c88a2d; font-size:15px; font-weight:600; cursor:pointer; }
+    #insc-popup .insc-submit:hover { background:#b47a24; }
+    #insc-popup .insc-login { margin-top:22px; color:#666; font-size:14px; text-align:center; }
+    #insc-popup .insc-login a { color:#b47a24; }
+    #insc-popup .insc-success { display:none; margin-top:16px; padding:12px; border-radius:6px; color:#216e39; background:#e7eee8; font-size:14px; text-align:center; }
+    #insc-popup .insc-success.show { display:block; }
+    @media (max-width:600px) {
+        #insc-popup .insc-card { padding:28px 20px 24px; }
+        #insc-popup .insc-grid { grid-template-columns:1fr; }
+    }
+</style>
+
+<div id="insc-popup" role="dialog" aria-modal="true" aria-labelledby="insc-title">
+    <div class="insc-card">
+        <button class="insc-close" type="button" id="insc-close" aria-label="Fermer">&times;</button>
+
+        <div class="insc-brand">Vite <span>&amp;</span> Gourmand</div>
+
+        <h2 id="insc-title">Créer un compte</h2>
+        <p class="insc-subtitle">Remplissez le formulaire pour accéder à vos commandes et à vos devis.</p>
+
+        <form id="insc-form" novalidate>
+            <div class="insc-grid">
+                <div class="insc-field">
+                    <label for="insc-nom">Nom <span>*</span></label>
+                    <input id="insc-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
+                </div>
+
+                <div class="insc-field">
+                    <label for="insc-prenom">Prénom <span>*</span></label>
+                    <input id="insc-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+                </div>
+
+                <div class="insc-field full">
+                    <label for="insc-email">Adresse e-mail <span>*</span></label>
+                    <input id="insc-email" name="email" type="email" autocomplete="email" placeholder="exemple@mail.com" required>
+                </div>
+
+                <div class="insc-field full">
+                    <label for="insc-telephone">Numéro de téléphone</label>
+                    <input id="insc-telephone" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78">
+                </div>
+
+                <div class="insc-field">
+                    <label for="insc-password">Mot de passe <span>*</span></label>
+                    <input id="insc-password" name="password" type="password" autocomplete="new-password" placeholder="••••••••" required>
+                    <small class="insc-hint">8 caractères minimum</small>
+                </div>
+
+                <div class="insc-field">
+                    <label for="insc-password-confirm">Confirmer <span>*</span></label>
+                    <input id="insc-password-confirm" name="password_confirm" type="password" autocomplete="new-password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <label class="insc-checkbox">
+                <input type="checkbox" name="cgu" required>
+                <span>J'accepte les conditions générales d'utilisation et la politique de confidentialité.</span>
+            </label>
+
+            <button class="insc-submit" type="submit">Créer mon compte</button>
+            <p class="insc-success" id="insc-success" role="status"></p>
+        </form>
+
+        <p class="insc-login">Vous avez déjà un compte ? <a href="../Connexion/connexion.php">Se connecter</a></p>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const popup = document.getElementById('insc-popup');
+        const closeBtn = document.getElementById('insc-close');
+        const openBtns = document.querySelectorAll('.btn-signup, [data-open-inscription]');
+
+        const openPopup = (e) => { e.preventDefault(); popup.classList.add('open'); };
+        const closePopup = () => popup.classList.remove('open');
+
+        openBtns.forEach((btn) => btn.addEventListener('click', openPopup));
+        closeBtn.addEventListener('click', closePopup);
+
+        const form = document.getElementById('insc-form');
+        const successMsg = document.getElementById('insc-success');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!form.checkValidity()) { form.reportValidity(); return; }
+            successMsg.textContent = 'Votre compte a été créé avec succès !';
+            successMsg.classList.add('show');
+            form.reset();
+        });
+        popup.addEventListener('click', (e) => { if (e.target === popup) closePopup(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
+    })();
+</script>

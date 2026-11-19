@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Vite & Gourmand</title>
+    <link rel="stylesheet" href="connexion.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.php" class="logo">
+        <span class="logo-icon">♨</span>
+        <span>
+            Vite & Gourmand
+            <small>TRAITEUR ÉVÉNEMENTIEL</small>
+        </span>
+    </a>
+
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="liste_menus.php">Nos menus</a>
+        <a href="apropos.php">À propos</a>
+        <a href="contact.php">Contact</a>
+    </nav>
+
+    <a href="connexion.php" class="header-button">Connexion</a>
+</header>
+
+<main class="connexion-container">
+
+    <section class="connexion-form">
+        <h1>Connexion</h1>
+        <p class="intro">
+            Accédez à votre espace client et profitez
+            de nos menus et services.
+        </p>
+
+
+        <form action="connexion_traitement.php" method="POST">
+
+            <label class="champ">
+                <span class="champ-icon">✉</span>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Adresse e-mail"
+                    autocomplete="email"
+                    required
+                >
+            </label>
+
+            <label class="champ">
+                <span class="champ-icon">♙</span>
+                <input
+                    type="password"
+                    name="mot_de_passe"
+                    placeholder="Mot de passe"
+                    autocomplete="current-password"
+                    required
+                >
+            </label>
+
+            <div class="options">
+                <label class="souvenir">
+                    <input type="checkbox" name="souvenir">
+                    Se souvenir de moi
+                </label>
+
+                <a href="mot_de_passe_oublie.php">
+                    Mot de passe oublié ?
+                </a>
+            </div>
+
+            <button type="submit" class="bouton-connexion">
+                Se connecter <span>→</span>
+            </button>
+
+        </form>
+
+        <div class="separateur"><span>ou</span></div>
+
+        <p class="inscription">
+            Pas encore de compte ?
+            <a href="inscription.php">Créer un compte</a>
+        </p>
+    </section>
+
+    <section class="connexion-image">
+        <div class="image-texte">
+            <p>Le goût</p>
+            <p>des bons moments.</p>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
